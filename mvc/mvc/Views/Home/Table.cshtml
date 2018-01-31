@@ -1,0 +1,15 @@
+﻿@using mvc.Helpers
+@model IEnumerable<mvc.Entities.Human>
+@{
+    ViewBag.Title = "Table";
+}
+
+<h2>Table</h2>
+
+
+
+@Html.TableHelper(Model)
+<hr />
+@Html.TableHelper(Model, "table-stripped", "table-bordered")
+<hr />
+@Html.TableHelper(Model, "table-condensed")

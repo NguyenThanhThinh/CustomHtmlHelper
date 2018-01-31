@@ -1,6 +1,9 @@
 ﻿@using mvc.Helpers;
+@model mvc.Entities.Human
 @{
+
     ViewBag.Title = "Home Page";
+    Dictionary<string, string> model = mvc.Entities.Human.GetAll().ToDictionary(x => x.Id.ToString(), x => x.Name);
 }
 
 <div class="jumbotron">
@@ -29,8 +32,11 @@
     </div>
     <div class="col-md-4">
        
+        <div class="form-group">
+            @Html.BootstrapTextBoxFor(t=>t.Name)
+        </div>
     </div>
     <div class="col-md-4">
-       
+       @Html.Chosen("Choose",model,"select option")
     </div>
 </div>
