@@ -1,0 +1,36 @@
+﻿@using mvc.Helpers;
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>HTML Helpers</h1>
+   
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                HTML Helpers
+            </div>
+            <div class="panel-body">
+              <div class="panel__content">
+                 
+                  @Html.Image("https://cdn.tgdd.vn/Products/Images/42/87840/iphone-7-plus-256gb-300x300.jpg")
+                  @Html.SuccessButton("Button", Url.Action("Index"))
+
+                  @Html.YouTubeEmbedder(videoId: "fAFj_XcAaBA")
+              </div>
+            </div>
+            <div class="panel-footer">ASP NET MVC</div>
+        </div>
+   
+    </div>
+    <div class="col-md-4">
+       
+    </div>
+    <div class="col-md-4">
+       
+    </div>
+</div>
